@@ -1,0 +1,55 @@
+@import '/src/scss/templates';
+
+.quickInfoCard {
+  $quickInfoCard: &;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 134px;
+
+  padding: 24px 32px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe0eb;
+
+  border-radius: 8px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+
+    @extend %title-h2;
+
+    color: #9fa2b4;
+  }
+
+  &__value {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 1px;
+
+    color: #252733;
+  }
+
+  &:hover {
+    border: 1px solid #3751ff;
+    outline: 2px solid #dde2ff;
+
+    #{ $quickInfoCard }__title,
+    #{ $quickInfoCard }__value {
+      color: #3751ff;
+    }
+  }
+}

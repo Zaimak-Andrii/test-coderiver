@@ -1,0 +1,118 @@
+@import '/src/scss/templates';
+
+.users-table {
+  display: flex;
+  flex-direction: column;
+
+  &__headers {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+
+    letter-spacing: 0.2px;
+
+    border-bottom: 1.5px solid #dfe0eb;
+
+    color: #9fa2b4;
+
+    padding: 0 32px;
+    padding-bottom: 12px;
+
+    /*& div {
+      border: 1px solid blue;
+    }*/
+
+    &__user {
+      justify-items: left;
+      flex-grow: 1;
+      margin-right: 40px;
+    }
+
+    &__company {
+      width: 208px;
+      margin-right: 40px;
+    }
+
+    &__email {
+      width: 240px;
+      margin-right: 40px;
+    }
+
+    &__distance {
+      width: 150px;
+    }
+  }
+
+  &__row {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+
+    width: 100%;
+    height: 92px;
+
+    padding: 24px 32px;
+
+    border-bottom: 1px solid #dfe0eb;
+
+    &__user,
+    &__company,
+    &__email {
+      display: flex;
+      flex-direction: row;
+      justify-items: left;
+      align-items: center;
+
+      margin-right: 40px;
+
+      &__container {
+        &__name {
+          margin-bottom: 4px;
+
+          @extend %text-main;
+        }
+        &__city {
+          @extend %text-grey;
+        }
+      }
+    }
+
+    &__user {
+      flex-grow: 1;
+      &__container {
+        margin-left: 24px;
+      }
+    }
+
+    &__company {
+      width: 208px;
+      margin-right: 40px;
+    }
+
+    &__email {
+      width: 240px;
+      margin-right: 40px;
+    }
+
+    &__distance {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 150px;
+    }
+
+    &:hover {
+      background: rgba(#3751ff, 0.04);
+    }
+  }
+}

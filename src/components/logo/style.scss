@@ -1,0 +1,39 @@
+@import '/src/scss/templates';
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  @extend %title-h2;
+
+  color: #a4a6b3;
+
+  opacity: 0.7;
+
+  & > span {
+    position: relative;
+
+    display: inline-block;
+
+    width: 32px;
+    height: 32px;
+
+    margin-right: 12px;
+
+    background-color: #3751ff;
+    border-radius: 50%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 11px;
+      top: 9px;
+      display: inline;
+      border-radius: 0% 50% 50% 0% !important;
+      width: 12px;
+      height: 14px;
+      background: linear-gradient(143.7deg, rgba(255, 255, 255, 0.7) 0%, #ffffff 100%);
+      border-radius: 50%;
+    }
+  }
+}

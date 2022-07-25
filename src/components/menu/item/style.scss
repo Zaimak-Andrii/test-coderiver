@@ -1,0 +1,64 @@
+@import '/src/scss/templates';
+
+.menu-item {
+  $menuItem: &;
+
+  position: relative;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  padding: 18px 0px;
+  padding-left: 32px;
+
+  @extend %text-dashboard-item;
+
+  &:nth-child(6) {
+    margin-bottom: 32px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -32px;
+      margin: 16px 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(#dfe0eb, 0.06);
+    }
+  }
+
+  &:hover {
+    position: relative;
+
+    background-color: rgba(#9fa2b4, 0.08);
+    color: #dde2ff;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 3px;
+      height: 100%;
+      background-color: #dde2ff;
+    }
+
+    #{ $menuItem }__icon {
+      color: #dde2ff;
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+
+    color: rgba(#9fa2b4, 0.4);
+
+    margin-right: 24px;
+  }
+}

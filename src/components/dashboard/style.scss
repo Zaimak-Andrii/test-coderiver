@@ -1,0 +1,13 @@
+.dashboard {
+  min-width: 255px;
+  min-height: 100vh;
+
+  background-color: #363740;
+
+  padding-top: 37px;
+
+  & .logo {
+    margin-left: 32px;
+    margin-bottom: 59px;
+  }
+}

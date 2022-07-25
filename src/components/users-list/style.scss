@@ -1,0 +1,24 @@
+@import '/src/scss/templates';
+
+.users-list {
+  min-width: 100%;
+  min-height: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe0eb;
+  border-radius: 8px;
+
+  margin-bottom: 30px;
+
+  padding: 32px 0px;
+  padding-bottom: 0px;
+
+  &__title {
+    margin-bottom: 48px;
+
+    margin-left: 32px;
+
+    @extend %title-h2;
+  }
+}

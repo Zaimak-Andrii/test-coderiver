@@ -1,0 +1,17 @@
+@import '/src/scss/templates';
+
+.ticket-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 32px 18px 32px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #dfe0eb;
+  }
+
+  @extend %text-main;
+
+  &__value {
+    color: #9fa2b4;
+  }
+}
