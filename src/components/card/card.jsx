@@ -24,7 +24,7 @@ Card.propTypes = {
   buttonTitle: PropTypes.string.isRequired,
   info: PropTypes.shape({
     text: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
+    value: PropTypes.string,
   }).isRequired,
   component: PropTypes.elementType.isRequired,
 };

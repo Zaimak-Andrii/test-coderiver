@@ -6,6 +6,6 @@ export const AvatarType = {
   border: 'border',
 };
 
-export default function Avatar({ link, type = AvatarType.normal }) {
-  return <img src={link} className='avatar' alt='avatar' data-type={type} />;
+export default function Avatar({ link, type = AvatarType.normal, ...props }) {
+  return <img src={link} className='avatar' alt='avatar' data-type={type} {...props} />;
 }

@@ -15,10 +15,27 @@
   padding-bottom: 0px;
 
   &__title {
+    display: flex;
+    justify-content: space-between;
+
     margin-bottom: 48px;
 
     margin-left: 32px;
+    margin-right: 32px;
 
     @extend %title-h2;
+
+    & > span {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: #c5c7cd;
+      & p {
+        margin-left: 8px;
+        @extend %text-main;
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-
+import { BsSortUp } from 'react-icons/bs';
 import './style.scss';
 import UsersTable from './table/usersTable';
 
@@ -17,7 +17,13 @@ export default function UsersList() {
   }, []);
   return (
     <div className='users-list'>
-      <div className='users-list__title'>All users</div>
+      <div className='users-list__title'>
+        All users
+        <span>
+          <BsSortUp />
+          <p>Sort</p>
+        </span>
+      </div>
       <UsersTable usersList={usersList} />
     </div>
   );

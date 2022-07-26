@@ -1,0 +1,55 @@
+@import '/src/scss/templates';
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 130px 53px;
+  margin-bottom: 30px;
+
+  background: #ffffff;
+  background-image: url('../../../assets/user-details.jpg');
+  background-repeat: no-repeat;
+
+  background-size: 100% 230px;
+
+  border: 1px solid #dfe0eb;
+  border-radius: 8px;
+
+  @extend %text-main;
+
+  &__name,
+  &__address,
+  &__phone,
+  &__website {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: 0.4px;
+  }
+
+  &__company {
+    @extend %text-grey;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 72px;
+  }
+
+  &__address,
+  &__phone,
+  &__website {
+    align-self: flex-start;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+    & > div {
+      margin-top: 14px;
+      @extend %text-main;
+    }
+  }
+}

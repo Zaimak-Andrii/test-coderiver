@@ -1,13 +1,29 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './style.scss';
 import Avatar from '../../avatar/avatar';
-import Badge from '../../badge/badge';
+import Badge, { BadgeColor } from '../../badge/badge';
 import { BsThreeDotsVertical } from 'react-icons/bs';
+import { DISTANCE_TYPE } from './usersTable';
 
 export default function TableRow({ user }) {
+  const navigate = useNavigate();
+
+  const getBadgeColor = (type) => {
+    switch (type) {
+      case DISTANCE_TYPE.LOW:
+        return BadgeColor.yellow;
+      case DISTANCE_TYPE.HIGH:
+        return BadgeColor.red;
+
+      default:
+        return BadgeColor.green;
+    }
+  };
+
   return (
-    <div className='users-table__row'>
+    <div className='users-table__row' onClick={() => navigate(`../users/${user.id}`)}>
       <div className='users-table__row__user'>
         <Avatar link={user.avatar} />
         <div className='users-table__row__user__container'>
@@ -28,7 +44,7 @@ export default function TableRow({ user }) {
         </div>
       </div>
       <div className='users-table__row__distance'>
-        <Badge type={user.distance}>{user.distance}</Badge>
+        <Badge color={getBadgeColor(user.distance)}>{user.distance}</Badge>
         <BsThreeDotsVertical className='users-table__row__distance__three-dots' />
       </div>
     </div>

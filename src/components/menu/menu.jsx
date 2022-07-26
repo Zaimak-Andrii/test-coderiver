@@ -7,14 +7,14 @@ import { ImUserTie } from 'react-icons/im';
 import './style.scss';
 
 const MenuList = [
-  { title: 'Overview', to: '', icon: FaChartPie },
-  { title: 'Users', to: '', icon: FaTicketAlt },
-  { title: 'Ideas', to: '', icon: FaLightbulb },
-  { title: 'Contacts', to: '', icon: IoIosPeople },
-  { title: 'Agents', to: '', icon: ImUserTie },
-  { title: 'Articles', to: '', icon: FaBook },
-  { title: 'Settings', to: '', icon: IoSettingsSharp },
-  { title: 'Subscription', to: '', icon: IoIosRibbon },
+  { title: 'Overview', to: 'overview', icon: FaChartPie },
+  { title: 'Users', to: 'users', icon: FaTicketAlt },
+  { title: 'Ideas', to: 'ideas', icon: FaLightbulb },
+  { title: 'Contacts', to: 'contacts', icon: IoIosPeople },
+  { title: 'Agents', to: 'agents', icon: ImUserTie },
+  { title: 'Articles', to: 'articles', icon: FaBook },
+  { title: 'Settings', to: 'settings', icon: IoSettingsSharp },
+  { title: 'Subscription', to: 'subsctiption', icon: IoIosRibbon },
 ];
 
 export default function Menu() {
@@ -22,7 +22,7 @@ export default function Menu() {
     <nav className='menu'>
       <ul>
         {MenuList.map((item) => (
-          <MenuItem key={item.title} icon={item.icon}>
+          <MenuItem key={item.title} icon={item.icon} to={item.to}>
             {item.title}
           </MenuItem>
         ))}

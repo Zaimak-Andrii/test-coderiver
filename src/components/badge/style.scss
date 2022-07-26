@@ -10,15 +10,20 @@
 
   @extend %text-badge;
 
-  &--normal {
+  &--green {
     background-color: #29cc97;
   }
 
-  &--low {
+  &--yellow {
     background-color: #fec400;
   }
 
-  &--high {
+  &--red {
     background-color: #f12b2c;
+  }
+
+  &--grey {
+    background-color: #f0f1f7;
+    color: #9fa2b4;
   }
 }

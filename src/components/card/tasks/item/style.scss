@@ -1,0 +1,21 @@
+@import '/src/scss/templates';
+
+.task-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 58px;
+
+  padding: 20px 32px 18px 32px;
+
+  @extend %text-main;
+
+  &:not(:first-child) {
+    border-top: 1px solid #dfe0eb;
+  }
+
+  &--grey {
+    color: #c5c7cd;
+  }
+}
